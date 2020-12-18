@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">-->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="false" name="XXX项目测试任务-测试组件名称">
+
+    <listeners>
+<!--        <listener class-name="org.uncommons.reportng.HTMLReporter" />-->
+<!--        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />-->
+
+        <listener class-name="com.nhdc.autotest.listener.RetryListener" />
+        <listener class-name="com.nhdc.autotest.listener.TestngListener" />
+    </listeners>
+    <test name="测试类名称" parallel="false">
+
+        <classes>
+            <!--局部参数，@name和@value必填，分别为参数名和参数值，如果参数名与全局参数一致，则覆盖全局参数取值-->
+            <class name="com.nhdc.autotest.testcase.LoginTest"/>
+        </classes>
+    </test>
+
+</suite> <!-- Suite -->
